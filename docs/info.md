@@ -11,7 +11,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 **Integration & Leak:** The circuit takes in an 8-bit input (`ui_in`) which represents incoming spikes. The membrane potential (`state`) integrates these inputs by adding them to the current state. 
 **Spiking Mechanism:** 
-**Refactory Period**: After firing, the neuron enters a refractory state for 10 clock cycles, disabling it durring that period.
+**Refractory Period**: After firing, the neuron enters a refractory state for 10 clock cycles, disabling it during that period.
 
 ## How to test
 

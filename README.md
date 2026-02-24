@@ -2,15 +2,15 @@
 # This project is for ECE-210 at UC Santa Cruz
 ## Leaky Integrate-and-Fire (LIF) with Refractory Period - By Cole Schreiner
 ## Overview:
-This project aims implements a bio-inspired Leaky Integrate-and-Fire (LIF) neuron.
-In order to imporove the base design, I implemented a **Refractory Period** which prevents
+This project implements a bio-inspired Leaky Integrate-and-Fire (LIF) neuron.
+In order to improve the base design, I implemented a **Refractory Period** which prevents
 the neuron from firing for 10 clock cycles after a spiked event. This mimics the recovery time
 of biological neurons and provides a natural low-pass filtering effect for high-frequency noise.
 
 ## Features:
 - **Leaky Integration**: The exponential decay of the membrane potential over time uses a 
 hardware efficient bit shift operation (`state >> 1`) to simulate membrane leakage.
-- **Refactory Period**: After firing, the neuron enters a refractory state for 10 clock cycles, disabling it durring that period.
+- **Refractory Period**: After firing, the neuron enters a refractory state for 10 clock cycles, disabling it during that period.
 
 ## Design:
 1. **Integration**: The membrane potential (`state`) integrates incoming spikes and decays over time.
