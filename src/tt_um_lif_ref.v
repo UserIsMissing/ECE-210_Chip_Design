@@ -17,13 +17,19 @@ module tt_um_lif_ref (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
-  assign uio_out [6:0] = 0;
-  assign uio_oe  = 1;
+  assign uio_out [6:0] = 7'b0;
+  assign uio_oe  = 8'b10000000;
 
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, uio_in, 1'b0};
 
-  // instantiate lif neuron
-  lif lif1 (.current(ui_in), .clk(clk), .reset_n(rst_n), .state(uo_out), .spike(uio_out[7]));
+  // instantiate lif_ref neuron
+  lif_ref lif_ref1 (
+    .current(ui_in), 
+    .clk(clk), 
+    .reset_n(rst_n), 
+    .state(uo_out), 
+    .spike(uio_out[7])
+  );
 
 endmodule
