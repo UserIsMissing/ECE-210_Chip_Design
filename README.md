@@ -17,6 +17,11 @@ hardware efficient bit shift operation (`state >> 1`) to simulate membrane leaka
 2. **Firing**: When the membrane potential exceeds a threshold >= 200, the neuron fires, outputting a spike and resetting the potential.
 3. **Refractory Period**: After firing, the neuron is disabled for 10 clock cycles, ignoring all inputs and preventing it from firing again immediately.
 
+## Simulation Results:
+The neuron successfully integrates incoming spikes and fires when the threshold is reached.
+Please view the simulation below:
+![LIF Simulation](Screenshot_Wave.png)
+**Figure 1: Timing Diagram.** As shown above, the membrane potential (`uo_out`) integrates until it hits the threshold, triggers a spike (`uio_out[7]`), and enters a 10-cycle refractory period where `uo_out` is held at zero despite continued input.
 
 <!-- 
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
