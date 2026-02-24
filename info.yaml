@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "a leaky integrate and fire neuron with refractory period"      # Project title
+  title:        "LIF Neuron with Refractory Period"      # Project title
   author:       "Cole Schreiner"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "it simulates a lif neuron with a refractory period"      # One line description of what your project does
+  description:  "A leaky integrate-and-fire neuron with a refractory period of 10 cycles and exponential bit shift leak"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
