@@ -31,7 +31,7 @@ async def test_project(dut):
     # wait to see a spike on bit 7 (out)
     for i in range (20):
         await ClockCycles(dut.clk, 1)
-        if dut.uio_out.value & 0x80: # see if bit 7 is HIGH
+        if int(dut.uio_out.value) & 0x80: # see if bit 7 is HIGH
             dut._log.info(f"Spike detected at cycle #{i}")
             break
     else:
