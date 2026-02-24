@@ -51,6 +51,8 @@ async def test_project(dut):
         assert current_spike == 0, f"Error: Shouldn't spike durring refractory period (Cycle {i})"
 
     # Verifying recovery
+    # Refractory period ended
+    # Needed to wait 2 cycles. First the counter sets to 0, then the state updates
     # At cycle 11, refrac period ends, neuron should start charging again
     await ClockCycles(dut.clk, 2)
 
