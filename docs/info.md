@@ -10,7 +10,7 @@ You can also include images in this folder and reference them in the markdown. E
 ## How it works
 
 **Integration & Leak:** The circuit takes in an 8-bit input (`ui_in`) which represents incoming spikes. The membrane potential (`state`) integrates these inputs by adding them to the current state. 
-**Spiking Mechanism:** 
+**Spiking Mechanism:** When the membrane potential reaches or exceeds a threshold of 200, the neuron "fires," generating a digital spike on output (`uio_out[7]`).
 **Refractory Period**: After firing, the neuron enters a refractory state for 10 clock cycles, disabling it during that period.
 
 ## How to test
@@ -18,7 +18,7 @@ You can also include images in this folder and reference them in the markdown. E
 **Reset:** Bring rst_n low for at least 10 clock cycles to initialize the (`state`) and (`ref_count`) to zero
 **Charge:** Provide a steady 8-bit input value
 **See Spike:** Monitor (`uio_out[7]`) for a high pulse, which indicates the threshold has been met
-**Refractory:** After a spike, observe that (`uo_out[7]`) remains low for 10 clock cycles, regardless of the input.
+**Refractory:** After a spike, observe that (`uio_out[7]`) remains low for 10 clock cycles, regardless of the input.
 **Recovery:** After the refractory period, the neuron should be able to spike again if the input is sufficient.
 
 ## External hardware

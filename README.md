@@ -23,6 +23,11 @@ Please view the simulation below:
 ![LIF Simulation](Screenshot_Wave.png)
 **Figure 1: Timing Diagram.** As shown above, the membrane potential (`uo_out`) integrates until it hits the threshold, triggers a spike (`uio_out[7]`), and enters a 10-cycle refractory period where `uo_out` is held at zero despite continued input.
 
+## Performance Metrics:
+- **Firing Limit:** Because of the 10-cycle refractory period, the maximum firing rate is $f_{clk}11$.
+- **Efficiency:** The design uses a simple bit shift for leakage, which is computationally efficient and suitable for hardware implementation.
+- **Noise Filtering:** The refractory period provides a natural low-pass filter, preventing rapid firing due to noise.
+
 <!-- 
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
 
