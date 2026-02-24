@@ -1,3 +1,4 @@
+![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
 # This project is for ECE-210 at UC Santa Cruz
 ## Leaky Integrate-and-Fire (LIF) with Refractory Period - By Cole Schreiner
 ## Overview:
@@ -17,7 +18,8 @@ hardware efficient bit shift operation (`state >> 1`) to simulate membrane leaka
 3. **Refractory Period**: After firing, the neuron is disabled for 10 clock cycles, ignoring all inputs and preventing it from firing again immediately.
 
 
-<!-- ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
+<!-- 
+![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
 
 # Tiny Tapeout Verilog Project Template
 
